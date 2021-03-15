@@ -1,10 +1,10 @@
 package com.torimia.authorization.model.entity;
 
-import com.sun.istack.NotNull;
 import com.torimia.authorization.model.AccountStatus;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "usr")

@@ -4,7 +4,6 @@ import com.torimia.authorization.model.dto.AuthorizationResponse;
 import com.torimia.authorization.model.dto.AuthorizationUserDto;
 import com.torimia.authorization.service.UserService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,8 +19,7 @@ public class UserController {
     private final UserService service;
 
     @PostMapping
-    public ResponseEntity<AuthorizationResponse> authorize(@Valid @RequestBody AuthorizationUserDto dto) {
+    public AuthorizationResponse authorize(@Valid @RequestBody AuthorizationUserDto dto) {
         return service.authorize(dto);
     }
-
 }
